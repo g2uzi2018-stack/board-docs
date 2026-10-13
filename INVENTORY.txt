@@ -1,8 +1,8 @@
        263  .gitignore
-      2643  INVENTORY.txt
+         0  INVENTORY.txt
       1309  LICENSE
        953  NOTICE
-      1489  README.md
+      1466  README.md
      29460  boards/alinx-ax7021/00-essential/AC7021尺寸结构.pdf
    1061629  boards/alinx-ax7021/00-essential/AC7021核心板PCB图.pdf
     250195  boards/alinx-ax7021/00-essential/AC7021核心板原理图.pdf
@@ -21,24 +21,21 @@
       1306  boards/alinx-ax7021/01-links/LINKS.md
       1430  boards/alinx-ax7021/README.md
        923  boards/alinx-ax7021/examples/EXAMPLES.md
-      1981  boards/yd-esp32-s3-n8r16/00-essential/PINOUT.md
-      1990  boards/yd-esp32-s3-n8r16/00-essential/README_zh.md
-     36463  boards/yd-esp32-s3-n8r16/00-essential/block_diagram.png
-     30689  boards/yd-esp32-s3-n8r16/00-essential/block_diagram_alt.png
-    445270  boards/yd-esp32-s3-n8r16/00-essential/board_overview.png
-    165119  boards/yd-esp32-s3-n8r16/00-essential/board_photo.png
-   1720233  boards/yd-esp32-s3-n8r16/00-essential/esp32-s3-wroom-1_datasheet_cn.pdf
-   1280501  boards/yd-esp32-s3-n8r16/00-essential/esp32-s3-wroom-1_datasheet_en.pdf
-    116871  boards/yd-esp32-s3-n8r16/00-essential/mechanical_inch.pdf
-    116018  boards/yd-esp32-s3-n8r16/00-essential/mechanical_metric.pdf
-    429073  boards/yd-esp32-s3-n8r16/00-essential/schematic_v1.4.pdf
-       920  boards/yd-esp32-s3-n8r16/01-links/LINKS.md
-      1542  boards/yd-esp32-s3-n8r16/README.md
-       522  boards/yd-esp32-s3-n8r16/examples/EXAMPLES.md
-       322  boards/yd-esp32-s3-n8r16/examples/arduino/01_hello_serial/01_hello_serial.ino
-       700  boards/yd-esp32-s3-n8r16/examples/arduino/02_rgb_gpio48/02_rgb_gpio48.ino
-      1420  boards/yd-esp32-s3-n8r16/examples/arduino/03_flash_psram_check/03_flash_psram_check.ino
-       472  boards/yd-esp32-s3-n8r16/examples/idf-snippets/NOTES.md
-
-TOTAL_FILES=41
-TOTAL_BYTES=14878146
+      1981  boards/yd-esp32-s3/00-essential/PINOUT.md
+      1819  boards/yd-esp32-s3/00-essential/README_zh.md
+     36463  boards/yd-esp32-s3/00-essential/block_diagram.png
+     30689  boards/yd-esp32-s3/00-essential/block_diagram_alt.png
+    445270  boards/yd-esp32-s3/00-essential/board_overview.png
+    165119  boards/yd-esp32-s3/00-essential/board_photo.png
+   1720233  boards/yd-esp32-s3/00-essential/esp32-s3-wroom-1_datasheet_cn.pdf
+   1280501  boards/yd-esp32-s3/00-essential/esp32-s3-wroom-1_datasheet_en.pdf
+    116871  boards/yd-esp32-s3/00-essential/mechanical_inch.pdf
+    116018  boards/yd-esp32-s3/00-essential/mechanical_metric.pdf
+    429073  boards/yd-esp32-s3/00-essential/schematic_v1.4.pdf
+       756  boards/yd-esp32-s3/01-links/LINKS.md
+      1919  boards/yd-esp32-s3/README.md
+       522  boards/yd-esp32-s3/examples/EXAMPLES.md
+       322  boards/yd-esp32-s3/examples/arduino/01_hello_serial/01_hello_serial.ino
+       700  boards/yd-esp32-s3/examples/arduino/02_rgb_gpio48/02_rgb_gpio48.ino
+      1420  boards/yd-esp32-s3/examples/arduino/03_flash_psram_check/03_flash_psram_check.ino
+       472  boards/yd-esp32-s3/examples/idf-snippets/NOTES.md
