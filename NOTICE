@@ -1,0 +1,20 @@
+Third-Party Documentation Notice
+================================
+
+This repository redistributes a small set of customer-facing board essentials
+(user manuals, schematics, pinouts, and public datasheets) for personal R&D
+convenience. All third-party documents remain the copyright of their respective
+owners:
+
+- ALINX / 黑金 (AX7021 / AC7021 materials)
+- AMD / Xilinx (Zynq-7000 overview & device datasheets, if included)
+- Microchip / other IC vendors (PHY, Flash, UART bridge datasheets)
+- VCC-GND Studio / 源地工作室 (YD-ESP32-S3 board materials)
+- Espressif Systems (ESP32-S3-WROOM-1 datasheets)
+
+Redistribution here does NOT transfer ownership. Official sources remain
+authoritative. Large course packs, Vivado project trees, and AMD User Guides
+are intentionally NOT mirrored — see each board's 01-links/LINKS.md.
+
+Original README / example source files authored for this repo are provided
+under MIT (see LICENSE) unless otherwise noted.

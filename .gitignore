@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# Build / tool leftovers
+*.log
+*.tmp
+__pycache__/
+.pio/
+.vscode/.browse.c_cpp.db*
+build/
+sdkconfig.old
+
+# Local staging (not for public repo)
+_staging/
+_dl/
+*.tar
+*.zip
+*.rar
+
+# Secrets
+*.pem
+*.key
+.env
