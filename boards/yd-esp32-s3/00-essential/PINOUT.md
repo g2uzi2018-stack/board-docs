@@ -1,6 +1,8 @@
 # YD-ESP32-S3 排针表（P1 / P2）
 
-序号与原理图 `schematic_v1.4.pdf` 一致。类型：P=电源，G=地，I/O/T=输入输出。
+![引脚图](pinout.jpg)
+
+上图来自 VCC-GND 官方仓库 `IMG/img11.jpg`。下表序号与原理图 `schematic_v1.4.pdf` 一致。类型：P=电源，G=地，I/O/T=输入输出。
 
 ## P1
 

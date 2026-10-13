@@ -8,14 +8,15 @@
 | 文件 | 用途 |
 |------|------|
 | `README_zh.md` | 先看这个 |
-| `PINOUT.md` | 排针对照 |
+| `pinout.jpg` | **官方引脚图**（来自 vcc-gnd `IMG/img11.jpg`）|
+| `PINOUT.md` | 排针对照表 |
 | `board_photo.png` / `board_overview.png` | 认板 |
 | `block_diagram.png` | 功能框图 |
-| `schematic_v1.4.pdf` | 板级原理图（正版当前约 V1.4；丝印若为 V1.3 勿 100% 盲信，但够用） |
+| `schematic_v1.4.pdf` | 板级原理图（与官方仓库 SHA 一致，当前正版 **V1.4**）|
 | `mechanical_metric.pdf` / `mechanical_inch.pdf` | 结构尺寸 |
 | `esp32-s3-wroom-1_datasheet_en.pdf` / `_cn.pdf` | 乐鑫模组手册 |
 
-未收录：MicroPython 固件包、下载工具安装包、Altium 源文件。
+未收录：MicroPython 固件包、下载工具安装包、Altium 源文件（官方仓库有 `.PcbDoc`，体积大）。
 
 ## 两个 Type-C 怎么用
 
@@ -43,7 +44,7 @@
 
 1. 先单独 USB，不接外设。
 2. 万用表确认 3V3 / 5V / GND（克隆板有过 5V 脚异常反馈）。
-3. 不清楚跳线焊盘含义前不要短接。
+3. 不清楚跳线焊盘（RGB / IN-OUT / USB-OTG）含义前不要短接。
 4. 认准源地正品；华强北仿板问题见官方仓库说明。
 
 ## 来源

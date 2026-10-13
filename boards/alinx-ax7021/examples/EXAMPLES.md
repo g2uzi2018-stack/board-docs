@@ -6,17 +6,19 @@
 git clone --depth 1 https://github.com/alinxalinx/AX7021B_2023.1
 ```
 
-## 典型入门顺序（名称以官方仓库/文档为准）
-
-1. **PS 跑通**：UART 打印、PS LED / GPIO
-2. **PL LED / 按键**：AXI GPIO 或直连 EMIO
-3. **单网口 LwIP** 或 Linux 单口 ping
-4. **HDMI 输出**（SiI9134 路径）
-5. **多网口**：五口独立千兆是本板核心卖点，放在基础通后再做
-6. **扩展模块**：摄像头 / 高速 AD（需对应 AN 模块资料）
-
-具体章节目录以 ReadTheDocs 为准：  
+文档教程（S1～S4）与 2023.1 对齐：  
 https://ax7021b-20231-v101.readthedocs.io/zh-cn/latest/
+
+## 建议入门顺序（对应 ReadTheDocs 章节名）
+
+1. **S1 · PL LED** — 「PL的 Hello World LED实验」
+2. **S1 · 裸机 UART** — 「体验ARM，裸机输出 Hello World」
+3. **S1 · PS 控 PL LED / 按键中断**
+4. **S1 · 以太网 LwIP** — 「以太网实验（LWIP）」
+5. **S1 · HDMI / VDMA** — 「HDMI输出实验」「使用VDMA驱动HDMI显示」
+6. **多网口** — 五口独立千兆是本板卖点，基础通后再做（见官方 GitHub 出厂例程）
+7. **S2 扩展模块** — AN108/AN706 AD、OV5640 摄像头等（需对应 AN 模块）
+8. **S4 Linux / PetaLinux** — 按需
 
 ## 本目录为何几乎为空
 

@@ -1,4 +1,4 @@
-// Print Flash / PSRAM sizes to verify module variant (N8R8 / N16R8 / claimed N8R16)
+// Print Flash / PSRAM sizes to verify module variant (N8R8 / N16R8; verify silk if odd)
 void setup() {
   Serial.begin(115200);
   delay(800);

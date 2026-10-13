@@ -14,6 +14,18 @@ PCB 背面常见丝印 `YD-ESP32-23`（同板型）；模组为乐鑫 **ESP32-S3
 
 入门阶段不要同时插两个 Type-C。需要原生 USB 功能时再接 OTG 口。
 
+## 板上跳线焊盘（默认多为断开）
+
+部分板子有 `RGB` / `IN-OUT` / `USB-OTG` 焊盘（见 rtek1000 说明）：
+
+| 焊盘 | 闭合后作用 | 注意 |
+|------|------------|------|
+| **RGB** | 接通 WS2812 数据 | 若不亮可检查是否需焊短 |
+| **IN-OUT** | USB VBUS 与 5Vin 旁路二极管连通 | 闭合后 USB 可给 5Vin 供电；外接 5V 时勿让 USB 反灌冲突 |
+| **USB-OTG** | 两个 Type-C 的 VBUS 并在一起 | 一般保持断开；除非清楚电源拓扑 |
+
+不清楚含义前**不要短接**。细节见 [rtek1000/YD-ESP32-23](https://github.com/rtek1000/YD-ESP32-23)。
+
 ## Flash / PSRAM 变体
 
 同一 PCB 可焊不同容量的 WROOM-1。公开常见 SKU：
@@ -24,7 +36,7 @@ PCB 背面常见丝印 `YD-ESP32-23`（同板型）；模组为乐鑫 **ESP32-S3
 | N8R8 | 8 MB | 8 MB |
 | **N16R8** | 16 MB | 8 MB（市面最常见） |
 
-「N8R16」（8 MB Flash + 16 MB PSRAM）**不是**源地公开常见命名。请看模组金属盖丝印，或烧 `examples/arduino/03_flash_psram_check` 再设 IDE 的 Flash Size / PSRAM。
+「N8R16」**不是**源地公开常见命名。请看模组金属盖丝印，或烧 `examples/arduino/03_flash_psram_check` 再设 IDE 的 Flash Size / PSRAM。
 
 ## 板上要点
 
@@ -32,6 +44,7 @@ PCB 背面常见丝印 `YD-ESP32-23`（同板型）；模组为乐鑫 **ESP32-S3
 - UART0 TX/RX：GPIO43 / GPIO44（走 CH343；旁路 TX/RX LED）
 - BOOT：GPIO0；RST：外部复位
 - 八线 Flash/PSRAM 模组：**GPIO35 / 36 / 37 外部不可用**
+- 引脚图：`00-essential/pinout.jpg` + `PINOUT.md`
 
 ## 目录
 
