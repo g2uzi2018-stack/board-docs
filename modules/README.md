@@ -12,9 +12,9 @@
 | [tft-2.8-ili9341-spi](tft-2.8-ili9341-spi/README.md) | 2.8" TFT 240×320 + 电阻触摸 + SD 卡 | SPI | ILI9341（待确认）+ XPT2046 类 | 2.8 寸 240×320 SPI 彩屏+电阻触摸+SD |
 | [oled-0.96-ssd1306-i2c](oled-0.96-ssd1306-i2c/README.md) | 0.96" OLED 128×64 | I2C | SSD1306（待确认）| 0.96 寸 128×64 I2C OLED，调试状态显示 |
 | [usb-ttl-dx-pj15](usb-ttl-dx-pj15/README.md) | Type-C 转 TTL 串口（DX-SMART DX-PJ15）| USB / UART | 桥接芯片待确认 | USB-C 转 TTL 串口调试下载线 |
-| [gnss-dx-pj17-lyno-n10](gnss-dx-pj17-lyno-n10/README.md) | GNSS 定位（DX-SMART DX-PJ17）| UART + 1PPS | LYNO N10 | GNSS 定位模块（LYNO N10），输出 NMEA 等 |
+| [gnss-dx-pj17-lyno-n10](gnss-dx-pj17-lyno-n10/README.md) | GNSS 定位（DX-PJ17 / DX-GP10-A）| UART + 1PPS | DX-GP10-A（内置陶瓷天线）| DX-GP10-A，GPS+BDS+GLONASS，UART 输出 NMEA |
 | [mcp2515-can](mcp2515-can/README.md) | CAN 总线 | SPI | MCP2515 + TJA1050（待确认）| SPI CAN 控制器+收发，接车载/机器人 CAN 总线 |
-| [4g-cat1-dx-pj14](4g-cat1-dx-pj14/README.md) | 4G Cat.1（DX-SMART DX-PJ14，推测是 DX-CT511 底板，待确认）| UART | DX-CT511（待确认）| 4G Cat.1 无线上网（暂按 DX-CT511 底板，待确认）|
+| [4g-cat1-dx-pj14](4g-cat1-dx-pj14/README.md) | 4G Cat.1（DX-PJ14 / DX-CT511-A）| UART | DX-CT511-A | 4G Cat.1 上网，TCP/UDP/HTTP/MQTT，无板载 GNSS |
 
 ## 实物图
 
@@ -24,7 +24,7 @@
 |:---:|:---:|:---:|
 | [<img src="max485-rs485/photo.jpg" alt="TTL 转 RS-485" width="180">](max485-rs485/README.md)<br>[TTL 转 RS-485](max485-rs485/README.md) | [<img src="pcf8591-hw011/photo.jpg" alt="AD/DA 模块 HW-011" width="180">](pcf8591-hw011/README.md)<br>[AD/DA 模块 HW-011](pcf8591-hw011/README.md) | [<img src="w5500-ethernet/photo.jpg" alt="以太网模块" width="180">](w5500-ethernet/README.md)<br>[以太网模块](w5500-ethernet/README.md) |
 | [<img src="tft-2.8-ili9341-spi/photo.jpg" alt="2.8 寸 TFT" width="180">](tft-2.8-ili9341-spi/README.md)<br>[2.8" TFT](tft-2.8-ili9341-spi/README.md) | [<img src="oled-0.96-ssd1306-i2c/photo.jpg" alt="0.96 寸 OLED" width="180">](oled-0.96-ssd1306-i2c/README.md)<br>[0.96" OLED](oled-0.96-ssd1306-i2c/README.md) | [<img src="usb-ttl-dx-pj15/photo.jpg" alt="Type-C 转 TTL" width="180">](usb-ttl-dx-pj15/README.md)<br>[Type-C 转 TTL](usb-ttl-dx-pj15/README.md) |
-| [<img src="gnss-dx-pj17-lyno-n10/photo.jpg" alt="GNSS 定位" width="180">](gnss-dx-pj17-lyno-n10/README.md)<br>[GNSS 定位](gnss-dx-pj17-lyno-n10/README.md) | [<img src="mcp2515-can/photo.jpg" alt="CAN 总线" width="180">](mcp2515-can/README.md)<br>[CAN 总线](mcp2515-can/README.md) | [<img src="4g-cat1-dx-pj14/photo.jpg" alt="4G Cat.1" width="180">](4g-cat1-dx-pj14/README.md)<br>[4G Cat.1](4g-cat1-dx-pj14/README.md) |
+| [<img src="gnss-dx-pj17-lyno-n10/photo.jpg" alt="GNSS DX-GP10-A" width="180">](gnss-dx-pj17-lyno-n10/README.md)<br>[GNSS DX-GP10-A](gnss-dx-pj17-lyno-n10/README.md) | [<img src="mcp2515-can/photo.jpg" alt="CAN 总线" width="180">](mcp2515-can/README.md)<br>[CAN 总线](mcp2515-can/README.md) | [<img src="4g-cat1-dx-pj14/photo.jpg" alt="4G DX-CT511-A" width="180">](4g-cat1-dx-pj14/README.md)<br>[4G DX-CT511-A](4g-cat1-dx-pj14/README.md) |
 
 ## 全部模块同时接到 YD-ESP32-S3 的推荐 GPIO 分配
 

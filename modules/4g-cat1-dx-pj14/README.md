@@ -1,28 +1,29 @@
-# DX-SMART DX-PJ14-V1.1（推测：DX-CT511 4G Cat.1 底板）
+# DX-SMART DX-PJ14 4G Cat.1 底板（DX-CT511-A）
 
 ![实物](photo.jpg)
 
-黑色底板带一根外接天线，丝印 `DX-PJ14-V1.1`、`VIN: DC5V-16V@10W`、`TX/RX LEVEL: 3.3V`。
+大夏龙雀 DX-PJ14-V1.1 底板，产品型是 **DX-CT511-A**。丝印 `DX-PJ14-V1.1`、`VIN: DC5V-16V@10W`、`TX/RX LEVEL: 3.3V`。板上只有一根 LTE 天线，没有 GNSS 天线座。板载 GNSS 属于 DX-CT511N，这块板没有。
 
-**型号识别（待确认）**：大夏龙雀官网没有 PJ14 的单独页面。不过它的引脚和电源规格（`EN` 高电平使能、`VIN` 5–16 V/10 W、TX/RX）和官方 **DX-CT511 / DX-CT511N 4G 全网通 Cat.1 模块**规格书里那块底板的描述一致，所以推测这是 CT511 的底板。CT511N 多一个 GNSS 天线座，照片里只有一根天线，所以可能是不带 N 的 CT511。请看背面或屏蔽罩上的模组丝印，确认一下，顺便确认 SIM 卡座在哪。
+技术手册里的同款底板带 Nano-SIM 卡槽。官网产品页把不带 GNSS 的这一档写作 DX-CT511。
 
 ## 引脚
 
 | 引脚 | 说明 |
 |---|---|
-| EN | 使能，高电平有效（规格书底板说明写的是默认高）|
+| EN | 使能，高电平有效，默认高 |
 | VIN | 5–16 V，按 10 W 准备（4G 发射瞬间电流很大）|
 | GND | 地 |
 | TX | 模块串口输出 → MCU RX（3.3 V）|
 | RX | 模块串口输入 ← MCU TX（3.3 V）|
-| DIR | 用途**待确认**（可能是给 RS-485 用的方向控制，规格书里没对上）|
-| 焊盘 GND/BOOT/VBUS/DM/DP/GND | 模组的 USB 口和 BOOT 脚，用来升级固件或通过 USB 调试（待确认）|
+| DIR | 用途**待确认** |
+| 焊盘 GND/BOOT/VBUS/DM/DP/GND | 用途**待确认** |
 
 ## 电气
 
-- TX/RX 是 3.3 V 电平，可以直接接 ESP32-S3。
+- 排针 TX/RX 是 3.3 V（丝印 `TX/RX LEVEL: 3.3V`），可以直接接 ESP32-S3。核心模组串口域是 1.8 V，底板已经转到 3.3 V。
 - **不要用 ESP32 板子的 5V 脚供电**：USB 口电流不够，模块联网时会掉电重启。用独立的 5–12 V 电源（≥2 A），并且和 ESP32 共地。
-- 用 AT 指令：支持 TCP / UDP / HTTP / MQTT（官网 CT511N 参数）。默认波特率、AT 指令集：**待确认**，以规格书为准。
+- 默认 UART **115200 8N1**，上电进入 AT 指令模式。
+- 协议：TCP / UDP / HTTP / MQTT。
 
 ## 接 YD-ESP32-S3
 
@@ -37,10 +38,12 @@ ESP32-S3 只有 3 个 UART：UART0 是下载 / 日志口，UART1 给了 RS-485�
 
 ## 库
 
-- Arduino：`HardwareSerial` 直接发 AT 指令；[TinyGSM](https://github.com/vshymanskyy/TinyGSM) 对这个模组是否兼容**待确认**。
-- ESP-IDF：UART + AT；也可以用 `esp_modem` 组件走 PPP（模组是否支持 PPP 待确认）。
+- Arduino：`HardwareSerial lte(0); lte.begin(115200, SERIAL_8N1, 6, 7);`，直接发 AT。方案 B 改用 `HardwareSerial lte(1)`，RX/TX 引脚仍是 6 / 7。
+- ESP-IDF：UART 驱动发 AT。
 
 ## 资料
 
-- DX-CT511/DX-CT511N 规格书（大夏龙雀官方，含底板引脚表）：https://www.szdx-smart.com/static/upload/2025/07/26/202507262744.pdf
-- 大夏龙雀 4G 模块分类：https://www.szdx-smart.com/cpzx-2.html
+- 技术手册（DX-CT511 / DX-CT511N，含底板引脚；带 N 才有 GNSS）：http://www.szdx-smart.com/static/upload/2025/07/26/202507262744.pdf
+- 串口应用指导（默认 115200 8N1，AT 模式）：https://el.psy.congroo.com/wp-content/uploads/2025/02/DX-CT511CT511N_%E4%B8%B2%E5%8F%A3UART_%E5%BA%94%E7%94%A8%E6%8C%87%E5%AF%BC.pdf
+- 社区使用笔记（DX-CT511-A 的 TCP / UDP / HTTP / MQTT。文中「Gps定位」一节是 CT511N 的指令，本板不用）：https://www.cnblogs.com/tianwuyvlianshui/p/18857883
+- 产品页（DX-CT511，5–16 V，TCP / UDP / HTTP / MQTT，UART）：https://www.szdx-smart.com/lyzhq/lyzRJ45/129.html
