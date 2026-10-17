@@ -19,10 +19,26 @@ boards/
     00-essential/
     01-links/
     examples/       # Arduino 短示例
-modules/            # 小模块：MAX485、PCF8591、W5500、2.8" TFT、0.96" OLED
+modules/            # 小模块，用途见下方「模块简报」
 ```
 
-每个板卡目录里，先读 `README.md`，再进 `00-essential/`。
+每个板卡目录里，先读 `README.md`，再进 `00-essential/`。小模块先读 [modules/README.md](modules/README.md)。
+
+## 模块简报
+
+`modules/` 收的是配合板卡用的小模块：引脚、电平、接线和库。每块只记用途，细节进对应目录。
+
+| 目录 | 用途 |
+|---|---|
+| [max485-rs485](modules/max485-rs485/README.md) | TTL/UART ↔ RS-485 总线转换，远距离/多节点串口通信 |
+| [pcf8591-hw011](modules/pcf8591-hw011/README.md) | I2C 8 位 AD/DA，可接光敏/热敏/电位器或外部模拟量 |
+| [w5500-ethernet](modules/w5500-ethernet/README.md) | SPI 硬核 TCP/IP 以太网，给 MCU 加有线网口 |
+| [tft-2.8-ili9341-spi](modules/tft-2.8-ili9341-spi/README.md) | 2.8 寸 240×320 SPI 彩屏+电阻触摸+SD |
+| [oled-0.96-ssd1306-i2c](modules/oled-0.96-ssd1306-i2c/README.md) | 0.96 寸 128×64 I2C OLED，调试状态显示 |
+| [usb-ttl-dx-pj15](modules/usb-ttl-dx-pj15/README.md) | USB-C 转 TTL 串口调试下载线 |
+| [gnss-dx-pj17-lyno-n10](modules/gnss-dx-pj17-lyno-n10/README.md) | GNSS 定位模块（LYNO N10），输出 NMEA 等 |
+| [mcp2515-can](modules/mcp2515-can/README.md) | SPI CAN 控制器+收发，接车载/机器人 CAN 总线 |
+| [4g-cat1-dx-pj14](modules/4g-cat1-dx-pj14/README.md) | 4G Cat.1 无线上网（暂按 DX-CT511 底板，待确认） |
 
 ## 怎么用
 
