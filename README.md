@@ -19,6 +19,7 @@ boards/
     00-essential/
     01-links/
     examples/       # Arduino 短示例
+modules/            # 小模块：MAX485、PCF8591、W5500、2.8" TFT、0.96" OLED
 ```
 
 每个板卡目录里，先读 `README.md`，再进 `00-essential/`。
