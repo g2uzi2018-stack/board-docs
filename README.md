@@ -36,9 +36,9 @@ modules/            # 小模块，用途见下方「模块简报」
 | [tft-2.8-ili9341-spi](modules/tft-2.8-ili9341-spi/README.md) | 2.8 寸 240×320 SPI 彩屏+电阻触摸+SD |
 | [oled-0.96-ssd1306-i2c](modules/oled-0.96-ssd1306-i2c/README.md) | 0.96 寸 128×64 I2C OLED，调试状态显示 |
 | [usb-ttl-dx-pj15](modules/usb-ttl-dx-pj15/README.md) | USB-C 转 TTL 串口调试下载线 |
-| [gnss-dx-pj17-lyno-n10](modules/gnss-dx-pj17-lyno-n10/README.md) | GNSS 定位模块（LYNO N10），输出 NMEA 等 |
+| [gnss-dx-pj17-lyno-n10](modules/gnss-dx-pj17-lyno-n10/README.md) | DX-PJ17 底板，产品型 DX-GP10-A（内置陶瓷天线），UART 输出 NMEA |
 | [mcp2515-can](modules/mcp2515-can/README.md) | SPI CAN 控制器+收发，接车载/机器人 CAN 总线 |
-| [4g-cat1-dx-pj14](modules/4g-cat1-dx-pj14/README.md) | 4G Cat.1 无线上网（暂按 DX-CT511 底板，待确认） |
+| [4g-cat1-dx-pj14](modules/4g-cat1-dx-pj14/README.md) | DX-PJ14 底板，产品型 DX-CT511-A（4G Cat.1，无板载 GNSS） |
 
 ## 怎么用
 
